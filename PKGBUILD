@@ -1,11 +1,10 @@
-# Maintainer: Phoney Badger <phoneybadgercode.4ikc7 at simplelogin.co>
-pkgname=pokemon-colorscripts-git
-_pkgname=pokemon-colorscripts
-pkgver=r103.c315110
+pkgname=pokemon-zsh-git
+_pkgname=pokemon-zsh
+pkgver=r666
 pkgrel=1
 pkgdesc="CLI utility that prints unicode sprites of pokemon to the terminal"
 arch=('any')
-url="https://gitlab.com/phoneybadger/pokemon-colorscripts.git"
+url="https://github.com/stein-rip/pokemon-zsh.git"
 license=('MIT')
 depends=('coreutils' 'python')
 makedepends=('git')
@@ -29,10 +28,10 @@ package() {
     install -Dm644 colorscripts/large/regular/* -t "$pkgdir/usr/local/opt/$_pkgname/colorscripts/large/regular"
     install -Dm644 colorscripts/large/shiny/* -t "$pkgdir/usr/local/opt/$_pkgname/colorscripts/large/shiny"
     install -Dm644 pokemon.json "$pkgdir/usr/local/opt/$_pkgname/pokemon.json"
-    install -Dm755 pokemon-colorscripts.py "$pkgdir/usr/local/opt/$_pkgname/pokemon-colorscripts.py"
+    install -Dm755 pokemon-zsh.py "$pkgdir/usr/local/opt/$_pkgname/pokemon-zsh.py"
     install -Dm644 LICENSE.txt "$pkgdir/usr/share/licenses/$_pkgname/LICENSE"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$_pkgname/README.md"
-    install -Dm644 pokemon-colorscripts.1 "$pkgdir/usr/local/man/man1/pokemon-colorscripts.1"
+    install -Dm644 pokemon-zsh.1 "$pkgdir/usr/local/man/man1/pokemon-zsh.1"
     # creating symlink in usr/local/bin
-    ln -sf "/usr/local/opt/$_pkgname/pokemon-colorscripts.py" "$pkgdir/usr/local/bin/pokemon-colorscripts"
+    ln -sf "/usr/local/opt/$_pkgname/pokemon-zsh.py" "$pkgdir/usr/local/bin/pokemon-zsh"
 }
