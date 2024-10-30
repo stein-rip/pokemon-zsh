@@ -135,6 +135,7 @@ def show_random_pokemon_by_names(
     # pokemon to be shiny. If the flag is set, always show shiny
     if not shiny:
         shiny = random.random() <= SHINY_RATE
+	is_large= not args.small
     show_pokemon_by_name(random_pokemon, show_title, shiny, is_large)
 
 
@@ -142,7 +143,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(
         prog="pokemon-colorscripts",
         description="CLI utility to print out unicode image of a pokemon in your shell",
-        usage="pokemon-colorscripts [OPTION] [POKEMON NAME]",
+        usage="pokemon-colorscripts [OPTION] [NAME]",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         add_help=False,
     )
@@ -180,8 +181,7 @@ def main() -> None:
     # ideally this argument should be --large, but using --big as -l is already
     # taken
     parser.add_argument(
-        "-b",
-        "--big",
+        "--small",
         action="store_true",
         help="Show a larger version of the sprite",
     )

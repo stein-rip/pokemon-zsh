@@ -1,12 +1,12 @@
-.TH "POKEMON-COLORSCRIPTS" "1" "2021-08-20" "GNU" "User Commands"
+.TH "POKEMON-ZSH" "1" "2021-08-20" "GNU" "User Commands"
 
 .SH "NAME"
 .PP
-pokemon-colorscripts - display unicode sprites of pokemon in the terminal
+pokemon-zsh - display unicode sprites of pokemon in the terminal
 
 .SH "SYNOPSIS"
 .PP
-.B pokemon-colorscripts
+.B pokemon-zsh
 .RB [-h|--help]
 .RB [-l|--list]
 .RB [-r|--random
@@ -18,12 +18,7 @@ pokemon-colorscripts - display unicode sprites of pokemon in the terminal
 
 .SH "DESCRIPTION"
 .PP
-Pokemon-colorscripts is a CLI utility written in shell script that prints out
-unicode sprites of pokemon to the terminal. Almost all pokemon generations 1-8
-are available (except different forms). You can select
-specific pokemon to be printed out by name or let the script choose a pokemon
-randomly. While choosing randomly you can also filter by generation.
-
+Ash Ketchhands Howboutdat
 .SH "OPTIONS"
 .TP
 .B "-h, --help"
@@ -59,31 +54,31 @@ Do not display pokemon name
 .SH "FILES"
 .TP
 All the files are present in the directory
-"/usr/local/opt/pokemon-colorscripts"
+"/usr/local/opt/pokemon-zsh"
 .TP
 with the executable script being symlinked to
-"/usr/local/bin/pokemon-colorscripts"
+"/usr/local/bin/pokemon-zsh"
 
 .SH "EXAMPLES"
-.SS "pokemon-colorscripts -r"
+.SS "pokemon-zsh -r"
 .PP
 Prints out a random pokemon. Add this command to your shell config file (.bashrc, .zshrc, fish.config
 etc.) to print out a random pokemon every time you open the terminal.
-.SS "pokemon-colorscripts -r 1"
+.SS "pokemon-zsh -r 1"
 .PP
 Print out a random pokemon from generation 1.
-.SS "pokemon-colorscripts -r 1-3"
+.SS "pokemon-zsh -r 1-3"
 .PP
 Print out a random pokemon from generations 1-3.
-.SS "pokemon-colorscripts -r 1,3,6"
+.SS "pokemon-zsh -r 1,3,6"
 .PP
 Print out a random pokemon from generations 1,3 or 6.
-.SS "pokemon-colorscripts -l"
+.SS "pokemon-zsh -l"
 .PP
 Print out all available pokemon names.
-.SS "pokemon-colorscripts -n chikorita"
+.SS "pokemon-zsh -n chikorita"
 .PP
 Print out the pokemon chikorita.
-.SS "pokemon-colorscripts -n mudkip -s"
+.SS "pokemon-zsh -n mudkip -s"
 .PP
 Print out the shiny version of mudkip.
